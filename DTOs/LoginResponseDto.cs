@@ -12,5 +12,7 @@ public class LoginResponseDto
 
     public DateTime CreatedAt { get; set; }
 
-    public string Token { get; set; } = string.Empty;
+    public bool RequiresMfa { get; set; }
+
+    public string? Token { get; set; }
 }

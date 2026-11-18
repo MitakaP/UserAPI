@@ -6,6 +6,17 @@ public class User
 {
     public int Id { get; set; }
 
+    public string? PasswordResetTokenHash { get; set; }
+
+    public DateTime? PasswordResetTokenExpiresAt { get; set; }
+
+    public bool IsMfaEnabled { get; set; } = false;
+
+    public string? MfaSecretProtected { get; set; }
+
+    public DateTime? MfaSetupExpiresAt { get; set; }
+
+
     [Required]
     [MaxLength(50)]
     public string FirstName { get; set; } = string.Empty;
